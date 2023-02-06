@@ -77,25 +77,25 @@ kratos proto server api\user\v1\user.proto -t app\user\internal\service
 
 - 注册 `http/rpc` 服务
 
-`http`类服务`server/http.go`:
-```go
-// NewHTTPServer new an HTTP server.
-func NewHTTPServer(c *conf.Server, UserService *service.UserService, logger log.Logger) *http.Server {
-    // ... 省略
-	v1.RegisterUserHTTPServer(srv, UserService)
-	// ... 省略
-}
-```
-
-`rpc`类服务`server/grpc.go`:
-```go
-// NewHTTPServer new an HTTP server.
-func NewGRPCServer(c *conf.Server, UserService *service.UserService, logger log.Logger) *http.Server {
-    // ... 省略
-	v1.RegisterUserServer(srv, UserService)
-	// ... 省略
-}
-```
+  `http`类服务`server/http.go`:
+  ```go
+  // NewHTTPServer new an HTTP server.
+  func NewHTTPServer(c *conf.Server, UserService *service.UserService, logger log.Logger) *http.Server {
+      // ... 省略
+      v1.RegisterUserHTTPServer(srv, UserService)
+      // ... 省略
+  }
+  ```
+  
+  `rpc`类服务`server/grpc.go`:
+  ```go
+  // NewHTTPServer new an HTTP server.
+  func NewGRPCServer(c *conf.Server, UserService *service.UserService, logger log.Logger) *http.Server {
+      // ... 省略
+      v1.RegisterUserServer(srv, UserService)
+      // ... 省略
+  }
+  ```
 
 - 生成`google-wire`代码
 
