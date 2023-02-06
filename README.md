@@ -1,6 +1,10 @@
-# shop-kratos
+<!-- TOC -->
+* [概述](#概述)
+* [开发步骤](#开发步骤)
+<!-- TOC -->
+# 概述
 
-> shop application with go-kratos
+> 使用`go-kratos`构建的一个商店
 
 # 开发步骤
 
