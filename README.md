@@ -101,6 +101,8 @@ kratos proto server api\user\v1\user.proto -t app\user\internal\service
 
 ```shell
 go generate ./...
+# 或者使用wire命令 go install github.com/google/wire/cmd/wire，需要到跳转到wire.go文件下
+wire
 ```
 
 - 运行
